@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('file:///Users/gracesadahiro20/Desktop/IMG_7042.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    height:100%;
+    background-image: url("file:///Users/gracesadahiro20/Desktop/IMG_2601.JPG");
+    min-height: 200px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("/w3images/parallax3.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+
+
+    <a href="#home" class="w3-bar-item w3-button"><font color="black">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"><font color="black"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"><font color="black"></i> PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"><font color="black"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <center><span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">GRACE <span class="w3-hide-small"></span> SADAHIRO</span></center>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p class="w3-center"><em>I love technology</em></p>
+  <p>Hello whomever may be viewing this, my name is Grace Sadahiro and I have created this personal website. I would like to thank my dear friendos Kristen, Sammy, 
+  Lauren, and Winter. Your four helped me when I was down or when you felt like I might have thrown my computer just because I didn't know I had to add a less than sign
+  in a line to debug my code. I am so happy that I have been able to make this website (almost) the best it can be! I would most likely update this website or create
+  more website designs in the future. Growing up, I have always had a thirst for knowledge about technology. I always wondered why my WiFi would be lost out of nowhere
+  while I was playing Webkinz or how my Webkinz could move so fast in a game when there was some invisible connection between my computer and the sky. I'm so glad I got
+  the opportunity to learn a language like JavaScript so that I know how to design websites before I even finish high school! </p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Grace Sadahiro</b></p><br>
+      <img src="https://pbs.twimg.com/profile_images/887827625636265986/pxIF4JLz_400x400.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>Welcome to my website. I am so happy to have been part of a program like Girls Who Code in which I could learn web development skills. I have always had a love
+        for computer science. When I was younger, my dad bought a PC and set it up in my brother's room. My parents always typed quickly, so after school I would spend a 
+        ton of time just practicing my typing skills on typeracer. Soon enough, the iPhone came out and I was so happy to have upgraded from a Blackberry. It was lighter
+        and there were no buttons on the screen to accidentally type "ji" instead of "hi". In my generation today, I believe technology has revolutionized for the better.
+        There were not always programs like Girls Who Code who empower women to succeed in computer science, a male dominated field. With lots of debugging and being close to 
+        tears, I am excited to say that this website (depending on how much I've done between now and the time a Women of Warner sees this) is (probably close to) finished!</p>
+    </div>
+  </div>
+
+<p class="w3-large w3-center w3-padding-16">I'm really good at:</p>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Computer Science</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-pencil"></i>School</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-female"></i>Spending quality time with friends/family</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+</div>
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">10+</span><br>
+    Years in Girl Scouts
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">3+</span><br>
+    CSF Membership Qualification Years
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">89+</span><br>
+    Happy Clients
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">150+</span><br>
+    Volunteer Hours
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">MY WORK</h3>
+  <p class="w3-center"><em>Here are some of my latest work pieces.<br> Click on the images to make them bigger.</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/Screen%20Shot%202018-06-04%20at%205.21.38%20PM%202.png" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Engineering Final Project: Find My Keys">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/Screen%20Shot%202017-11-15%20at%208.49.19%20AM.png" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Engineering Pasta Bridge Project">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/Rising%20Stars%2015th%20Annual%20Miniature%20Golf%20Tournament%20Ad.png" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="For a youth leadership program that I participated in during my sophomore year of high school, Rising Stars, I was
+        chosen to design our miniature golf tournament's poster and newspaper, but this is the ad that I also created that was featured in the Japanese-English newspaper called
+        Rafu Shimpo.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/IMG_3624.jpg" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="One of my first Arduino projects
+      ever was to make software and hardware so that the LEDs turn on and off like traffic lights and pedestrian walking signals.">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+    </div>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">MY PICTURES</h3>
+  <p class="w3-center"><em>Here are some of my favorite pictures.<br> Click on the images to make them bigger.</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/Screen%20Shot%202017-10-12%20at%2011.01.20%20PM.png" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="This was the first time I played with an actual robot. I was so fascinated, even at age 8, that technology was awesome!">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/IMG_4600.JPG" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="I love food, 
+      especially ice cream during the summer! These delicious treats were from right after a super fun day on the beach with my friends.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/IMG_4206.jpg" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="This is a picture that I took
+      of a sunset one day at the beach. My family loves to go to a restaurant called Gladstone's in Malibu because the food is absolutely fascinating and there is a beach
+      right next to the restaurant that you can walk on! How great is that?!">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/IMG_0143.jpg" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="These are some
+      of my friends from a youth leadership program I do every year called Kizuna. We learn about what it means to be leaders of our community and future generations as 
+      Japanese Americans.">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/IMG_2617.JPG" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="During my 
+      sophomore year of high school, I participated in a youth leadership program called Rising Stars. Throughout the program, we earned sponsorship money, posted flyers,
+      submitted newspaper ads, and collected raffle prizes to earn a total of $28,000 (the highest record amount earned in the entirety of the program) after hosting a
+      successful miniature golf tournament.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/IMG_3661.JPG" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Every year, a 
+      non-profit organization that I am part of, San Marino National Charity League, has the sophomores model in a Strawberry Tea. This is a picture of a few of my friends
+      and I right after the fashion show part of the Strawberry Tea.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/E8B2B613-2DE9-4475-97EC-8D1AC442F5AE.jpg" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Having my name is a true honor. Some people may or may not notice, but on the ground in front of the Little Tokyo's JANM (Japanese American
+      National Museum) are hundreds of names of people who have donated to the museum. I always felt special having my name engraved in the ground there because to me it is
+      a symbol of my importance in the Japanese American and Japanese community. Every person who has their name printed has value. In eighth grade, for a brief time my
+      English teacher taught us about the Japanese Internment Camps. My dad at the time explained to me in more detail, because my grandma was in elementary school at a camp,
+      why, what, and how it happened. I knew for a long time that my name was in front of JANM, but getting to tell my friends that my name was engraved there and sharing
+      my family's stories with them and hearing them say, 'Oh my gosh that is so cool that your name is there! You have an interesing family history', gave me hope that more
+      people could be learning about all the things that affected the Japanese community during World War II.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="file:///Users/gracesadahiro20/Desktop/FullSizeRender.jpg" style="width:215px; height:215px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Ever since I
+      was little, my dad got me super into sports. I played softball for 8 years, but I stopped now because I just do not have the time for it. I am still playing 
+      basketball, but my team only plays together a couple of times per year due to high school schedules. Although I may not be as sports active as I would like, I still
+      exercise to stay healthy and I LOVE LOVE LOVE to watch sports games, especially the Dodgers. When it comes to games, I tend to get competitive, but I am so thankful
+      for most of the sports teams that I have been on because of the many many many friendships I have made and will treasure forever.">
+    </div><div>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> California, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: gracesadahiro@gmail.com<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<!-- Add Google Maps -->
+
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(41.878114, -87.629798);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+<title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 20, lng: 100.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    async defer></script>
+
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
+
